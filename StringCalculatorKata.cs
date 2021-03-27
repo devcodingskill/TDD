@@ -48,8 +48,10 @@ namespace TDDTest
         [TestCase("1,2,3,4,5,-5")]
         [TestCase("-1,1,2,9")]
         [TestCase("5,6,8,-5")]
+        [TestCase("5,6,8,-10")]
         public void Add_StringContainingNegativeNumbers_Throws(string numbers)
         {
+
             Assert.Throws<ArgumentException>(() => StringCalculator.Add(numbers));
         }
     }
